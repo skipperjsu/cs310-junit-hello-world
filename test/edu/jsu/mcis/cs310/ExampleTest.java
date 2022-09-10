@@ -7,7 +7,7 @@ public class ExampleTest {
 
     private Main main;
     private String expectedGreeting, expectedReverseGreeting;
-    private String expectedReverse1, expectedReverse2, expectedReverse3;
+    private String expectedReverse1, expectedReverse2, expectedReverse3, expectedReverseNew;
     
     @Before
     public void setUp() {
@@ -17,6 +17,7 @@ public class ExampleTest {
         expectedReverse1 = "topaeT elttiL a m'I";
         expectedReverse2 = "elddiD elddiD yeH";
         expectedReverse3 = "kcoD yrokciD yrokciH";
+        expectedReverseNew = "dlrow-olleh-tinuj-013sc";
     }
         
     @Test
@@ -49,4 +50,9 @@ public class ExampleTest {
         assertEquals(expectedReverse3, actual);
     }
     
+    @Test
+    public void testReverseMessageNew() {
+        String actual = main.reverse("cs310-junit-hello-world");
+        assertEquals(expectedReverseNew, actual);
+    }
 }
